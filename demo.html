@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo</title>
+</head>
+<body>
+	<div id="app">
+		{{message}}
+	</div>
+	<div id="app-2">
+		<span v-bind:title="message">
+			鼠标悬停几秒查看动态绑定信息！
+		 </span>
+	</div>
+	<div><a href="#aaa">跳转至aaa处</a></div>
+	<div><a name="aaa">我是aaa处</a></div>
+<script src="./vue.js"></script>
+<script type="text/javascript">
+	var app=new Vue({
+		el:'#app',
+		data:{
+			message:'Hello Vue'
+		}
+	})
+	var app2 = new Vue({
+  		el: '#app-2',
+  		data: {
+    		message: '页面加载于 ' + new Date().toLocaleString()
+  			}
+		})
+</script>
+</body>
+</html>
